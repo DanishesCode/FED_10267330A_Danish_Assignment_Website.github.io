@@ -3,6 +3,7 @@ body{
     background-color:black;
     padding: 0;
     margin:0;
+    overflow:hidden;
 }
 .navBar{
     position:sticky;
@@ -18,6 +19,10 @@ body{
 }
 .logo:hover{
     background-color: #D9D9D9;
+}
+#hamburgerMenu{
+    position:absolute;
+    left: 100000px;
 }
 .navBarButton{
     height:70px;
@@ -36,7 +41,7 @@ body{
     height:70px;
     position:relative;
     left:120px;
-    background-color: #FF0303;
+    flex-direction: row;
    
 }
 #shoppingCart{
@@ -45,11 +50,20 @@ body{
     height:90%;
 }
 #itemsQuantity{
-    position:relative;
-    height: 30px;
-    width:30px;
+    position:absolute;
+    height: 20px;
+    width:20px;
     background-color: #FF0303;
     border-radius: 30px;
-    right:10%;
+    top:60%;
+    right: 10%;
+    text-align: center;
+    font-family: "Jaro";
+    font-size:15px;
+    color:#fff;
+
+}
+
+@media screen and (min-width:480px){
 
 }
