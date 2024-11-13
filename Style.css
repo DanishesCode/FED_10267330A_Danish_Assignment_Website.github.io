@@ -27,8 +27,7 @@ h1{
     background-color: #D9D9D9;
 }
 #hamburgerMenu{
-    position:absolute;
-    left: 100000px;
+    display:none;
 }
 .navBarButton{
     height:70px;
@@ -69,6 +68,12 @@ h1{
     color:#fff;
 
 }/*End of navbar*/
+body{
+    background-color:black;
+    padding: 0;
+    margin:0;
+    overflow-x:hidden;
+}
 .starterContainer{
     margin:0;
     padding:0;
@@ -86,7 +91,7 @@ h1{
     100%{transform:rotate(360deg)}
 }
 #pizzaBackground{
-    width: 1407px;
+    width: 90%;
     height:680px;
     display: block;
     margin-top: 100px;
@@ -194,6 +199,7 @@ h1{
         width:60px;
     }
     #hamburgerMenu{
+        display:block;
         width:70px;
         height:70px;
         position:relative;
