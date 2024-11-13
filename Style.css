@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Kablammo&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Jockey+One&family=Kablammo&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
 body{
     background-color:black;
     padding: 0;
     margin:0;
-    overflow:hidden;
+    overflow-x:hidden;
+}
+h1{
+    font-family: "Jaro";
+    font-size:75px;
+    color:#fff;
+    font-weight:normal;
 }
 .navBar{
-    position:sticky;
     background-color: #fff;
     height: 70px;
     width: 100%;
@@ -63,13 +69,65 @@ body{
     color:#fff;
 
 }/*End of navbar*/
+.starterContainer{
+    margin:0;
+    padding:0;
+}
+#pizzaRotate{
+    position:absolute;
+    width: 675px;
+    height:675px;
+    left:55%;
+    top:130px;
+    border-image: 0px;
+}
+#pizzaBackground{
+    width: 1407px;
+    height:680px;
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+}
+#label1{
+    position:absolute;
+    top:250px;
+    left:100px;
+
+}
+#label2{
+    color:#FF0303;
+    position:absolute;
+    top:350px;
+    left:100px;
+}
+#label3{
+    position:absolute;
+    top:250px;
+    left:420px;
+}
+.nearByButton{
+    position:relative;
+    border:none;
+    border-radius: 30px;
+    background-color: #FF0303;
+    color:white;
+    font-family: "Jockey One";
+    width:270px;
+    height:135px;
+    font-size:30px;
+    left:5%;
+    bottom:300px;
+}
+
 
 @media screen and (max-width:667px){
     body{
         padding: 0;
         margin:0;
         background-color: black;
-        overflow:auto;
+        overflow-x:hidden;
     }
     .logo{
         height: 100%;
@@ -92,7 +150,7 @@ body{
         width:70px;
         height:70px;
         position:relative;
-        left:210%;
+        left:150%;
        
     }
     .navContainer{
@@ -114,5 +172,5 @@ body{
     .navBarButton:hover{
         background-color: #D9D9D9;
     }
-    /*End of navbar*/
+    /*End of mobile navbar*/
 }
