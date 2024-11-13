@@ -120,20 +120,63 @@ h1{
     left:5%;
     bottom:300px;
 }
-.bestLabel{
+#bestLabel{
     position:relative;
-    margin-left:50%;
+    text-align: center;
+    margin-top: auto;
 }
-#sellerBackground{
+.sellerBackground{
     border-radius: 30px;
-    width: 650px;
-    height:497px;
+    width: 600px;
+    height:450px;
 }
-#cheese{
-    width: 421px;
-    height:432px;
+.bestSellerContainer{
+    display:flex;
+    flex-direction:row;
+    margin-left: 4%;
 }
+.bestSellerHolder{
+    padding-left:2%;
+    margin:0;
+}
+.cheese{
+    position:relative;
+    width: 350px;
+    height:350px;
+    bottom:48%;
+    left:15%;
 
+}
+.pepperoni{
+    position:relative;
+    width: 350px;
+    height:350px;
+    bottom:48%;
+    left:15%;
+
+}
+.bestSellerText{
+    color:#fff;
+    font-family:"Jockey One";
+    font-size: 45px;
+    position:relative;
+    font-weight: normal;
+    bottom:55%;
+    left:25%;
+}
+.orderButton{
+    position:absolute;
+    font-family: "Jockey one";
+    font-weight: normal;
+    color:#fff;
+    background-color: #FF0303;
+    border-radius: 30px;
+    width:350px;
+    height:150px;
+    font-size:75px;
+    top:220%;
+    margin-left: 39%;
+}
 
 @media screen and (max-width:667px){
     body{
