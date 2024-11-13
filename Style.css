@@ -80,7 +80,7 @@ h1{
     left:55%;
     top:130px;
     border-image: 0px;
-    animation:pizzaRotation 50s infinite;
+    animation: linear pizzaRotation 50s infinite;
 }
 @keyframes pizzaRotation{
     100%{transform:rotate(360deg)}
