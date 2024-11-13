@@ -62,8 +62,57 @@ body{
     font-size:15px;
     color:#fff;
 
-}
+}/*End of navbar*/
 
-@media screen and (min-width:480px){
-
+@media screen and (max-width:667px){
+    body{
+        padding: 0;
+        margin:0;
+        background-color: black;
+        overflow:auto;
+    }
+    .logo{
+        height: 100%;
+        width:60px;
+    }
+    #hamburgerMenu{
+        width:70px;
+        height:70px;
+        position:relative;
+        left:450%;
+    }
+    .navBar{
+        position:sticky;
+        background-color: #fff;
+        height: 70px;
+        width: 100%;
+        
+    }
+    #cart{
+        width:70px;
+        height:70px;
+        position:relative;
+        left:210%;
+       
+    }
+    .navContainer{
+        position:absolute;
+        display:none;
+        flex-direction: column;
+        right:-5%;
+        width:100%;
+        top:75%;
+    }
+    .navBarButton{
+        position:relative;
+        right:5%;
+        height:30px;
+        width:100%;
+        font-size:20px;
+        text-align: center;
+    }
+    .navBarButton:hover{
+        background-color: #D9D9D9;
+    }
+    /*End of navbar*/
 }
