@@ -120,6 +120,19 @@ h1{
     left:5%;
     bottom:300px;
 }
+.bestLabel{
+    position:relative;
+    margin-left:50%;
+}
+#sellerBackground{
+    border-radius: 30px;
+    width: 650px;
+    height:497px;
+}
+#cheese{
+    width: 421px;
+    height:432px;
+}
 
 
 @media screen and (max-width:667px){
