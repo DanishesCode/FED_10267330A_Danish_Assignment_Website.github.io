@@ -7,44 +7,27 @@
     <title>Pizza Hut |Home</title>
 </head>
 <body>
-    <div class = "navBar">
-        <img class = "logo" src="images/Logo.png" alt = "Pizza Hut Logo">
-        <img id = "hamburgerMenu" src = "images/Menu.png" alt = "Menu">
-        <ul class = "navContainer">
-                <button class = "navBarButton">Menu</button>
-                <button class = "navBarButton">Locations</button>
-                <button class = "navBarButton">Contact</button>
-                <button class = "navBarButton">Tracking</button>
-
+    <nav>
+        <img id = "logo" src ="Images/Logo.png" alt = "PizzaHut logo">
+        <ul>
+            <button class = "navButtons">Menu</button>
+            <button class = "navButtons">Locations</button>
+            <button class = "navButtons">Content</button>
+            <button class = "navButtons">Tracking</button>
         </ul>
-        <div id="cart">
-            <img id = "shoppingCart" src = "images/icons8-shopping-cart-96.png" alt = "Shopping cart">
-            <div id = "itemsQuantity">0</div>
+        <div id = "cart">
+            <div id = "itemQuantity">0</div>
         </div>
+        <img id = "hamburgerMenu"  src = "Images/Menu.png" alt = "Hamburger Menu">
+    </nav>
+    <div id = "firstContainer">
+        <img id = "pizzaRotate" src = "Images/Pizza1.png">
+        <div id = "labelContainer">
+            <h2 id = "label1">Calm Down,</h2>
+            <h2 id = "label2">Have a</h2>
+            <h2 id = "label3">Pizza Hut</h2>
+        </div> 
+        <button id = "nearBy">Nearby pizzahuts</button>
     </div>
-    
-    <div class = "starterContainer">
-        <img id = "pizzaBackground" src = "images/Cuttingblackboard.jpg">
-        <img id = "pizzaRotate" src ="images/Pizza1.png" alt ="Pizza rotating">
-        <h1 id = "label1">Calm Down,</h1>
-        <h1 id = "label3">have a</h1>
-        <h1 id ="label2">Pizza Hut</h1>
-        <button class ="nearByButton">Nearby pizzahuts</button>
-    </div>
-    
-    <h1 id = "bestLabel">Our Best Sellers</h1>
-    <div class = "bestSellerContainer">
-        <div class = "bestSellerHolder">
-            <img class = "sellerBackground" src = "images/Cuttingblackboard.jpg">
-            <img class = "cheese" src = "images/Cheesepizza.png" alt = "Cheese pizza">
-            <h3 class = "bestSellerText">Cheese pizza</h3>
-        </div>
-        <div class = "bestSellerHolder">
-            <img class = "sellerBackground" src = "images/Cuttingblackboard.jpg">
-            <img class = "pepperoni" src = "images/Pepperoni.png" alt="Pepperoni pizza">
-            <h3 class = "bestSellerText">Cheese pizza</h3>
-        </div>  
-     </div>
-     <button class = "orderButton">Order</button>
 </body>
 </html>

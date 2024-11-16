@@ -4,239 +4,120 @@ body{
     background-color:black;
     padding: 0;
     margin:0;
-    overflow-x:hidden;
+    overflow:hidden;
 }
-h1{
-    font-family: "Jaro";
-    font-size:75px;
-    color:#fff;
-    font-weight:normal;
-}
-.navBar{
+nav{
     background-color: #fff;
-    height: 70px;
-    width: 100%;
-    column-count: 6;
-    
+    display:grid;
 }
-.logo{
-    width:  100px;
-    height: 70px;
+#logo{
+    width:60px;
+    height:60px;
 }
-.logo:hover{
+#logo:hover{
     background-color: #D9D9D9;
+}
+ul{
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    flex-basis:auto;
+    top:0;
+    left: 10%;
+    width:70%;
+    height:60px;
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+.navButtons{
+    position:relative;
+    height: 100%;
+    border-style: none;
+    width:25%;
+    background-color: #fff;
+    font-size: 1.4em;
+    font-family: "Jaro";
+    font-weight: normal;
+
+}
+.navButtons:hover{
+    background-color: #D9D9D9;
+}
+#cart{
+    position:absolute;
+    height:60px;
+    width:60px;
+    background-image: url("Images//icons8-shopping-cart-96.png");
+    background-size: 60px 60px;
+    left:85%;
+}
+#itemQuantity{
+    position:relative;
+    background-color: red;
+    border-radius: 30px;
+    top:63%;
+    left:70%;
+    height:20px;
+    width:20px;
+    text-align: center;
+    font-size: 1vw;
 }
 #hamburgerMenu{
     display:none;
 }
-.navBarButton{
-    height:70px;
-    width:249px;
-    font-size: 45px;
-    background-color: #fff;
-    border: none;
-    font-family: "Jaro";
-
-}
-.navBarButton:hover{
-    background-color: #D9D9D9;
-}
-#cart{
-    width:70px;
-    height:70px;
+#firstContainer{
     position:relative;
-    left:120px;
-    flex-direction: row;
-   
-}
-#shoppingCart{
-    padding-top:5px;
-    width: 90%;
-    height:90%;
-}
-#itemsQuantity{
-    position:absolute;
-    height: 20px;
-    width:20px;
-    background-color: #FF0303;
+    height:60%;
+    width:86%;
+    top:50px;
+    background-image: url("Images/Cuttingblackboard.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin:auto;
     border-radius: 30px;
-    top:60%;
-    right: 10%;
-    text-align: center;
-    font-family: "Jaro";
-    font-size:15px;
-    color:#fff;
 
-}/*End of navbar*/
-body{
-    background-color:black;
-    padding: 0;
-    margin:0;
-    overflow-x:hidden;
-}
-.starterContainer{
-    margin:0;
-    padding:0;
 }
 #pizzaRotate{
     position:absolute;
-    width: 675px;
-    height:675px;
-    left:55%;
-    top:130px;
-    border-image: 0px;
+    max-height:40vw;
+    max-width:40vw;
+    left:60%;
     animation: linear pizzaRotation 50s infinite;
 }
 @keyframes pizzaRotation{
     100%{transform:rotate(360deg)}
 }
-#pizzaBackground{
-    width: 90%;
-    height:680px;
-    display: block;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 30px;
+#labelContainer{
+    position:relative;
+    margin-left:0;
+    width:40%;
+    top:5%;
 }
 #label1{
-    position:absolute;
-    top:250px;
-    left:100px;
-
+    position:relative;
+    color:#fff;
+    font-family:"Jaro";
+    font-weight: normal;
+    font-size:5vw;
+    top:15%;
+    left:5%;
 }
 #label2{
-    color:#FF0303;
-    position:absolute;
-    top:350px;
-    left:100px;
+    position:relative;
+    color:#fff;
+    font-family:"Jaro";
+    font-weight: normal;
+    width:50%;
+    font-size:5vw;
+    left:5%;
 }
 #label3{
-    position:absolute;
-    top:250px;
-    left:420px;
-}
-.nearByButton{
     position:relative;
-    border:none;
-    border-radius: 30px;
-    background-color: #FF0303;
-    color:white;
-    font-family: "Jockey One";
-    width:270px;
-    height:135px;
-    font-size:30px;
-    left:5%;
-    bottom:300px;
-}
-#bestLabel{
-    position:relative;
-    text-align: center;
-    margin-top: auto;
-}
-.sellerBackground{
-    border-radius: 30px;
-    width: 600px;
-    height:450px;
-}
-.bestSellerContainer{
-    display:flex;
-    flex-direction:row;
-    margin-left: 4%;
-}
-.bestSellerHolder{
-    padding-left:2%;
-    margin:0;
-}
-.cheese{
-    position:relative;
-    width: 350px;
-    height:350px;
-    bottom:48%;
-    left:18%;
-
-}
-.pepperoni{
-    position:relative;
-    width: 350px;
-    height:350px;
-    bottom:48%;
-    left:18%;
-
-}
-.bestSellerText{
-    color:#fff;
-    font-family:"Jockey One";
-    font-size: 45px;
-    position:relative;
+    color:red;
+    font-family:"Jaro";
     font-weight: normal;
-    bottom:55%;
-    left:28%;
-}
-.orderButton{
-    position:absolute;
-    font-family: "Jockey one";
-    font-weight: normal;
-    color:#fff;
-    background-color: #FF0303;
-    border-radius: 30px;
-    width:350px;
-    height:150px;
-    font-size:75px;
-    top:220%;
-    margin-left: 39%;
-}
-
-@media screen and (max-width:667px){
-    body{
-        padding: 0;
-        margin:0;
-        background-color: black;
-        overflow-x:hidden;
-    }
-    .logo{
-        height: 100%;
-        width:60px;
-    }
-    #hamburgerMenu{
-        display:block;
-        width:70px;
-        height:70px;
-        position:relative;
-        left:450%;
-    }
-    .navBar{
-        position:sticky;
-        background-color: #fff;
-        height: 70px;
-        width: 100%;
-        
-    }
-    #cart{
-        width:70px;
-        height:70px;
-        position:relative;
-        left:150%;
-       
-    }
-    .navContainer{
-        position:absolute;
-        display:none;
-        flex-direction: column;
-        right:-5%;
-        width:100%;
-        top:75%;
-    }
-    .navBarButton{
-        position:relative;
-        right:5%;
-        height:30px;
-        width:100%;
-        font-size:20px;
-        text-align: center;
-    }
-    .navBarButton:hover{
-        background-color: #D9D9D9;
-    }
-    /*End of mobile navbar*/
+    font-size:5vw;
+    width:50%;
+    left:49%;
 }
