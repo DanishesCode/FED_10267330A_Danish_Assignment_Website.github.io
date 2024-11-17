@@ -76,7 +76,7 @@ ul{
 }
 #hamburgerMenu{
     display:none;
-}
+}/*end of navbar*/
 #firstContainer{
     position:relative;
     height:50%;
@@ -208,7 +208,49 @@ ul{
     margin:auto;
     margin-top:10px;
     margin-bottom:100px;
+}/*end of index*/
+#contactContainer{
+    margin-left:auto;
+    margin-right:auto;
+    width:60%;
+    height:70vh;
+
 }
+#messageDropper{
+    position:relative;
+    background-color: #fff;
+    border-radius: 30px;
+    height:100%;
+    width:70%;
+    left:30%;
+}
+#contactInfo{
+    position:relative;
+    display:inline-flex;
+    background-color:#FF0303;
+    border-radius: 30px;
+    bottom:80%;
+    left:10%;
+    width:50%;
+    height:60%;
+    flex-direction: column;
+}
+.iconInfo{
+    position:relative;
+    height:30px;
+    width:30px;
+    
+}
+h5{
+    position:relative;
+    font-family: "Jaro";
+    font-weight: normal;
+    font-size:1.5vw;
+    color:white;
+    left:10%;
+    bottom:100px;
+}
+
 
 @media screen and (max-width: 667px) {
     nav{
