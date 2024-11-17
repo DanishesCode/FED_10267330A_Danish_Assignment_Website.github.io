@@ -13,6 +13,7 @@ h1{
     font-size:5vw;
     font-weight: normal;
     text-align: center;
+    top:1%;
 
 }
 nav{
@@ -201,4 +202,64 @@ ul{
     margin:auto;
     margin-top:10px;
     margin-bottom:100px;
+}
+
+@media screen and (max-width: 667px) {
+    nav{
+        background-color: #fff;
+        display:grid;
+    }
+    #logo{
+        width:50px;
+        height:50px;
+    }
+    ul{
+        position:absolute;
+        display: none;
+        flex-direction: column;
+        flex-basis:auto;
+        top:50px;
+        left: 10%;
+        width:80%;
+        height:60px;
+        list-style-type:none;
+        padding:0;
+        margin:0;
+        z-index: 1;
+    }
+    .navButtons{
+        position:relative;
+        height: 100%;
+        border-style: none;
+        width:100%;
+        background-color: #fff;
+        font-size: 1.4em;
+        font-family: "Jaro";
+        font-weight: normal;
+    
+    }
+    #cart{
+        position:absolute;
+        height:50px;
+        width:50px;
+        background-image: url("Images//icons8-shopping-cart-96.png");
+        background-size: 50px 50px;
+        left:70%;
+    }
+    #itemQuantity{
+        position:relative;
+        background-color: red;
+        border-radius: 30px;
+        top:63%;
+        left:70%;
+        height:20px;
+        width:20px;
+        text-align: center;
+        font-size: 1vw;
+    }
+    #hamburgerMenu{
+        position:absolute;
+        display:block;
+        left:85%;
+    }
 }
