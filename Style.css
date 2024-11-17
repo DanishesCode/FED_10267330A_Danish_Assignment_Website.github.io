@@ -220,36 +220,77 @@ ul{
     position:relative;
     background-color: #fff;
     border-radius: 30px;
-    height:100%;
+    height:80%;
     width:70%;
     left:30%;
 }
-#contactInfo{
-    position:relative;
-    display:inline-flex;
-    background-color:#FF0303;
-    border-radius: 30px;
-    bottom:80%;
-    left:10%;
-    width:50%;
-    height:60%;
-    flex-direction: column;
-}
-.iconInfo{
-    position:relative;
-    height:30px;
-    width:30px;
+#labelDropper{
+    text-align: center;
+    font-family: "Jaro";
+    font-weight:normal;
+    font-size:2vw;
     
 }
-h5{
-    position:relative;
+.inputBox{
+    border-color: black;
+    border-radius: 30px;
+    height:40px;
+    font-size:1vw;
+    background-color: #D9D9D9;
+    
+}
+.inputBox::placeholder{
+    color:#fff; 
     font-family: "Jaro";
     font-weight: normal;
-    font-size:1.5vw;
-    color:white;
-    left:10%;
-    bottom:100px;
 }
+#message{
+    border-color: black;
+    border-radius: 30px;
+    height:25vh;
+    width:20vw;
+    font-size:1vw;
+    background-color: #D9D9D9;
+    vertical-align: top;
+    text-align: left;
+    word-break: break-all;
+}
+#message::placeholder{
+    color:#fff; 
+    font-family: "Jaro";
+    font-weight: normal;
+    vertical-align: top;
+    text-align: left;
+    vertical-align: 0;
+}
+#inputContainer{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    gap:10%;
+    width:50%;
+    height:50%;
+    left:40%;
+    top:4vh;
+}
+#submitMessage{
+    position:relative;
+    border-radius: 30px;
+    border-style: none;
+    width:20vw;
+    height:8vh;
+    outline:auto;
+    outline-color: black;
+    background-color:#FF0303;
+    color:#fff;
+    font-family: "Jaro";
+    font-weight: normal;
+    font-size: 3vw;
+    top:10px;
+    left:30%;
+    top:8vh;
+}
+    
 
 
 @media screen and (max-width: 667px) {
