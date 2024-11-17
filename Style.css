@@ -4,7 +4,16 @@ body{
     background-color:black;
     padding: 0;
     margin:0;
-    overflow:hidden;
+    overflow-x:hidden;
+    align-items: center;
+}
+h1{
+    color:white;
+    font-family: "Jaro";
+    font-size:5vw;
+    font-weight: normal;
+    text-align: center;
+
 }
 nav{
     background-color: #fff;
@@ -93,6 +102,7 @@ ul{
     margin-left:0;
     width:40%;
     top:5%;
+    height:50%;
 }
 #label1{
     position:relative;
@@ -100,8 +110,8 @@ ul{
     font-family:"Jaro";
     font-weight: normal;
     font-size:5vw;
-    top:15%;
-    left:5%;
+    top:10%;
+    left:15%;
 }
 #label2{
     position:relative;
@@ -110,7 +120,7 @@ ul{
     font-weight: normal;
     width:50%;
     font-size:5vw;
-    left:5%;
+    left:15%;
 }
 #label3{
     position:relative;
@@ -118,6 +128,77 @@ ul{
     font-family:"Jaro";
     font-weight: normal;
     font-size:5vw;
-    width:50%;
-    left:49%;
+    width:60%;
+    left:59%;
+    bottom:10.2vw;
+}
+#labelContainer{
+    top:6vw;
+}
+#nearBy{
+    position:relative;
+    border-style: none;
+    background-color: #FF0303;
+    border-radius: 30px;
+    margin-left: 7%;
+    margin-bottom:10%;
+    color:white;
+    height:10vw;
+    width:20vw;
+    font-size:3vw;
+    font-family: "Jockey One";
+
+}
+#bestSellerContainer{
+    margin-top:100px;
+    display:flex;
+    flex-direction: row;
+    gap:30px;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+
+}
+.bestSeller{
+    background-image: url("Images/Cuttingblackboard.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width:40%;
+    height:100%;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bestPizza{
+    position:relative;
+    height:20vw;
+    width:20vw;
+    left:25%;
+    bottom:0.3%;
+}
+.bestLabel{
+    position:relative;
+    color:white;
+    font-family:"Jockey One";
+    font-weight:normal;
+    font-size:3vw;
+    margin-left:30%;
+    bottom:5vh;
+}
+#orderButton{
+    position:relative;
+    display:block;
+    color:white;
+    border-radius: 30px;
+    background-color: red;
+    border-style: none;
+    font-family: "Jockey One";
+    height:10vw;
+    width:25vw;
+    font-size:5vw;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom:100px;
 }
