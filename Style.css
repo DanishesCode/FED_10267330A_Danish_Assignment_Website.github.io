@@ -309,6 +309,48 @@ h5{
  
 }
 /*end of contact*/
+#searchMenu{
+    position:relative;
+    border-style: none;
+    border-radius: 30px;
+    font-size:3vw;
+    height:5vw;
+    width:30vw;
+    background-color: #D9D9D9;
+    
+}
+#searchMenu::placeholder{
+    font-family: "Jaro";
+    font-weight:normal;
+    color:white;
+}
+#menuContainer{
+    height:100%;
+    width:100%;
+}
+.menuContent{
+    background-color: #fff;
+    height:30vw;
+    width:25vw;
+    border-radius: 30px;
+}
+.contentPicture{
+    position:relative;
+    height:50%;
+    width:50%;
+}
+.contentName{
+    position:relative;
+}
+.description{
+    position:relative;
+}
+.number{
+    position:relative;
+}
+.addCart{
+    position:relative;
+}
 
 @media screen and (max-width: 667px) {
     nav{
@@ -404,5 +446,5 @@ h5{
     #message{
         font-size:3vw;
     }
- 
+    /*end of contact*/
 }
