@@ -325,19 +325,21 @@ h5{
   
   .search-bar {
     width: 50%;
-    height:8vw;
+    height:4vw;
     padding: 10px;
     border: none;
     border-radius: 30px;
     margin-top: 10px;
+    font-family: "Jaro";
+    font-size:2vw;
   }
   
   .menu-section {
-    margin-bottom: 40px;
+    margin-bottom: 10%;
   }
   
   .menu-section h2 {
-    font-size: 24px;
+    font-size: 3vw;
     margin-bottom: 15px;
     color:white;
     font-family:"Jaro";
@@ -350,24 +352,20 @@ h5{
     height:400px;
     gap: 100px;
   }
-  .menu-Grid2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
   
   .menu-item {
     background-color: white;
     color: black;
     border-radius: 10px;
     text-align: center;
+    height:100%;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .menu-item img {
-    width: 80%;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -376,16 +374,24 @@ h5{
   .item-name {
     font-size: 18px;
     margin: 10px 0;
+    font-family: "JetBrains Mono";
+    font-weight: bolder;
   }
   
   .menu-item button {
     padding: 10px 15px;
     border: none;
     background-color: #DE9355;
-    color: white;
-    border-radius: 5px;
-    font-size: 16px;
+    height:3vw;
+    width:6vw;
+    color: black;
+    border-radius: 30px;
+    font-size: 1vw;
     cursor: pointer;
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    text-align: center;
+    vertical-align:middle;
   }
   
   .menu-item button:hover {
