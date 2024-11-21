@@ -58,6 +58,9 @@ ul{
 .navButtons:hover{
     background-color: #D9D9D9;
 }
+#pizzaVideo{
+    width:100%;
+}
 #cart{
     position:absolute;
     height:60px;
@@ -80,7 +83,7 @@ ul{
 #hamburgerMenu{
     display:none;
 }/*end of navbar*/
-#firstContainer{
+.firstContainer{
     position:relative;
     height:50%;
     width:86%;
