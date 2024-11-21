@@ -123,19 +123,12 @@ ul{
     color:#fff;
     font-family:"Jaro";
     font-weight: normal;
-    width:50%;
+    width:100%;
     font-size:5vw;
     left:15%;
 }
-#label3{
-    position:relative;
+#label2 span{
     color:red;
-    font-family:"Jaro";
-    font-weight: normal;
-    font-size:5vw;
-    width:60%;
-    left:59%;
-    bottom:10.2vw;
 }
 #labelContainer{
     top:6vw;
@@ -147,12 +140,16 @@ ul{
     border-radius: 30px;
     margin-left: 7%;
     margin-bottom:10%;
+    margin-top:10%;
     color:white;
     height:10vw;
     width:20vw;
     font-size:3vw;
     font-family: "Jockey One";
 
+}
+#nearBy:hover{
+    cursor: pointer;
 }
 #bestSellerContainer{
     margin-top:100px;
