@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <img id = "logo" src ="Images/Logo.png" alt = "PizzaHut logo">
+        <ul>
+            <button class = "navButtons">Menu</button>
+            <button class = "navButtons">Locations</button>
+            <button class = "navButtons">Contact</button>
+            <button class = "navButtons">Tracking</button>
+        </ul>
+        <div id = "cart">
+            <div id = "itemQuantity">0</div>
+        </div>
+        <img id = "hamburgerMenu"  src = "Images/Menu.png" alt = "Hamburger Menu">
+    </nav>
+  <div class="checkout-container">
+    <h1>Checkout</h1>
+    <span>Items</span>
+    <span>Quantity</span>
+    <span>Price</span>
+    <div class="checkout-content" id = "checkout-template">
+        <div class="item">
+            <div class="item-details">
+              <img src="Images/Cheesepizza.png" alt="Cheese Pizza">
+              <span>Cheese Pizza</span>
+            </div>
+            <div class="item-quantity">
+              <button>-</button>
+              <span>3</span>
+              <button>+</button>
+            </div>
+            <div class="item-price">$37.50</div>
+          </div>  
+    </div>
+    
+
+    <div class="discount">
+      <input type="text" placeholder="Enter Discount Code">
+      <button class="apply">Apply</button>
+    </div>
+
+    <div class="totals">
+      <p>Total: <span>$87.50</span></p>
+      <p>Discount Code: <span>-$10.00</span></p>
+      <p>Total Payable: <span class="payable">$77.50</span></p>
+    </div>
+
+    <button class="pay-button">Pay</button>
+  </div>
+</body>
+</html>

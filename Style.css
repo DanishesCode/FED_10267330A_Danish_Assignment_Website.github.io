@@ -411,6 +411,145 @@ h5{
   .menu-item button:hover {
     background-color: darkorange;
   }
+  /*end of menu*/
+
+  
+  .checkout-container {
+    background-color: white;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:100px;
+    padding: 3%; 
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    width: 80%; 
+    height: 85%; 
+    text-align: center;
+  }
+  
+  .checkout-container h1 {
+    text-align: center;
+    font-size: 36px;
+    color:black;
+    margin-bottom: 20px;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .item-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-details img {
+    width: 10vw; 
+    height: 10vw;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+  
+
+  
+  .item-quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-quantity button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px; 
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .item-quantity span {
+    margin: 0 15px; 
+    font-size: 20px; 
+  }
+  
+  .item-price {
+    font-weight: bold;
+    font-size: 20px; 
+  }
+  
+  .discount {
+    display: flex;
+    margin: 30px 0; 
+  }
+  
+  .discount input {
+    flex: 1;
+    padding: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    font-size: 18px;
+  }
+  
+  .discount button {
+    padding: 10px 20px; 
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 0 8px 8px 0;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .totals {
+    margin-bottom: 20px; 
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .totals p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 20px; 
+    
+  }
+  
+  .totals .payable {
+    font-size: 24px; 
+    font-weight: bold;
+  }
+  
+  .pay-button {
+    width: 100%;
+    padding: 20px; 
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 22px; 
+    font-weight: bold;
+    
+  }
+  
+  .pay-button:hover {
+    background-color: #45a049; 
+  }
+  .checkout-content{
+    display:flex;
+    width:100%;
+    flex-direction:column;
+  }
+  .checkout-container span{
+    font-family: "Jaro";
+    font-size:2vw;
+    margin-left:25%;
+  }
+  
+  
+  
+  
 @media screen and (max-width: 667px) {
     nav{
         background-color: #fff;
@@ -524,4 +663,25 @@ h5{
     .menu-grid{
         height:100%;
     }
-}
+    /*end of menu*/
+    .checkout-container {
+        width: 90%; /* Adjust width for smaller devices */
+        height: 90%; /* Adjust height for smaller devices */
+      }
+    
+      h1 {
+        font-size: 28px; /* Smaller heading */
+      }
+    
+      .item-details img {
+        width: 80px; /* Slightly smaller images */
+        height: 80px;
+      }
+    
+      .item-quantity button,
+      .discount button {
+        font-size: 16px; /* Smaller buttons */
+      }
+    }
+  
+
