@@ -409,7 +409,7 @@ h5{
   }
   
   .menu-item button:hover {
-    background-color: darkred;
+    background-color: darkorange;
   }
 @media screen and (max-width: 667px) {
     nav{
@@ -506,4 +506,22 @@ h5{
         font-size:3vw;
     }
     /*end of contact*/
+    .filterContainer button{
+        font-size:3vw;
+    }
+    .menu-grid .menu-item{
+        height:200px;
+        padding:0;
+    }
+    .menu-item button{
+        font-size:2vw;
+        height:20%;
+        width:12vw;
+    }
+    .menu-section{
+        margin-bottom:0;
+    }
+    .menu-grid{
+        height:100%;
+    }
 }
