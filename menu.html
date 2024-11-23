@@ -8,19 +8,19 @@
     <title>PizzaHut|Menu</title>
 </head>
 <body>
-    <nav>
-        <img id = "logo" src ="Images/Logo.png" alt = "PizzaHut logo">
-        <ul>
-            <button class = "navButtons">Menu</button>
-            <button class = "navButtons">Locations</button>
-            <button class = "navButtons">Contact</button>
-            <button class = "navButtons">Tracking</button>
-        </ul>
-        <div id = "cart">
-            <div id = "itemQuantity">0</div>
-        </div>
-        <img id = "hamburgerMenu"  src = "Images/Menu.png" alt = "Hamburger Menu">
-    </nav>
+  <nav>
+    <img id = "logo" src ="Images/Logo.png" alt = "PizzaHut logo" onclick="navigateIndex()">
+    <ul>
+        <button class = "navButtons" onclick="navigateMenu()">Menu</button>
+        <button class = "navButtons" onclick =  "navigateLocation()">Locations</button>
+        <button class = "navButtons" onclick = "navigateContact()">Contact</button>
+        <button class = "navButtons" onclick = "navigateTracking()">Tracking</button>
+    </ul>
+    <div id = "cart" onclick="navigateCheckout()">
+        <div id = "itemQuantity">0</div>
+    </div>
+    <img id = "hamburgerMenu"  src = "Images/Menu.png" alt = "Hamburger Menu">
+</nav>
     <body>
         <div class="menu-container">
           <header class="menu-header">
