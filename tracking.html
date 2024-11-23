@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Tracking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <img id = "logo" src ="Images/Logo.png" alt = "PizzaHut logo">
+        <ul>
+            <button class = "navButtons">Menu</button>
+            <button class = "navButtons">Locations</button>
+            <button class = "navButtons">Contact</button>
+            <button class = "navButtons">Tracking</button>
+        </ul>
+        <div id = "cart">
+            <div id = "itemQuantity">0</div>
+        </div>
+        <img id = "hamburgerMenu"  src = "Images/Menu.png" alt = "Hamburger Menu">
+    </nav>
+  <div class = "tracking-container">
+    <div class="head">
+        <h1>Track your order</h1>
+        <input type = "text" id = "track-input" placeholder="Enter Order Id">
+    </div>
+    <div class="track-container">
+        <label>Order Information</label>
+        <hr>
+        <p>Order Id:</p>
+        <span>1</span>
+        <p>Order Placed:</p>
+        <span>13 Sep,12pm</span>
+        <hr>
+        <label>Order Status:</label>
+        <p>Kitchen is preparing your order</p>
+        <hr>
+        <label>ETA:</label>
+        <span>10 minutes</span>
+    </div>
+</body>
+</html>
