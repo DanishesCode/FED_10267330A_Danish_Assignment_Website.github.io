@@ -443,9 +443,9 @@ h5{
   
   .checkout-container h1 {
     text-align: center;
-    font-size: 36px;
+    font-size: 3vw;
     color:black;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
   }
   
   .item {
@@ -554,6 +554,9 @@ h5{
     display:flex;
     width:100%;
     flex-direction:column;
+  }
+  .label-heading{
+    display: flex;
   }
   .checkout-container span{
     font-family: "Jaro";
