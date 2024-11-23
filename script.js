@@ -1,3 +1,12 @@
+const filterButtons = document.querySelectorAll('.filterContainer button');
+const allButton = document.getElementById("all");
+console.log(allButton);
+filterButtons.forEach = function(){
+    console.log('h');
+}
+
+
+/*navigation functions*/
 function navigateMenu(){
     window.location.href = "menu.html"; 
 }
