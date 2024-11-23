@@ -108,7 +108,7 @@ ul{
 #labelContainer{
     position:relative;
     margin-left:0;
-    width:40%;
+    width:60%;
     top:5%;
     height:50%;
 }
@@ -122,6 +122,7 @@ ul{
     left:15%;
 }
 #label2{
+    display:flex;
     position:relative;
     color:#fff;
     font-family:"Jaro";
@@ -129,9 +130,12 @@ ul{
     width:100%;
     font-size:5vw;
     left:15%;
+    gap:2%;
 }
 #label2 span{
     color:red;
+    font-size:5vw;
+    
 }
 #labelContainer{
     top:6vw;
@@ -153,6 +157,7 @@ ul{
 }
 #nearBy:hover{
     cursor: pointer;
+    background-color: #C40C0C;
 }
 #bestSellerContainer{
     margin-top:100px;
@@ -211,7 +216,12 @@ ul{
     margin:auto;
     margin-top:10px;
     margin-bottom:100px;
-}/*end of index*/
+}
+#orderButton:hover{
+    cursor: pointer;
+    background-color: #C40C0C;
+}
+/*end of index*/
 #contactContainer{
     margin-left:auto;
     margin-right:auto;
