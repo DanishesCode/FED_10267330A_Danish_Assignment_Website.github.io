@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () { 
     searchFilter();
     filterFunc();
+    addToCart([]);
 });
 
 
 
 let filterStatus = "all";
-console.log(filterStatus);
 /*navigation functions*/
 function navigateMenu(){
     window.location.href = "menu.html"; 
@@ -26,6 +26,38 @@ function navigateCheckout(){
 function navigateIndex(){
     window.location.href = "index.html"; 
 }
+function getCartData(){
+    
+}
+function addToCart(cart){
+    const addButton = document.querySelectorAll(".menu-item button");
+    const itemQuantity = document.getElementById("itemQuantity");
+    addButton.forEach(function(button){
+        button.addEventListener("click",function(){
+            let item = button.parentElement.querySelector("p").textContent; 
+            console.log(item);
+            if(cart.length == 0){
+                cart.push([item,1])
+            }else{
+                let selected = null;
+                cart.forEach(function(x){
+                    if(x[0] == item){
+                        selected = x
+                    }
+                })
+                if(selected == null){
+                    cart.push([item,1])
+                }else{
+                    selected[1] +=1;
+                }
+            }
+
+
+            console.log(cart);
+        })
+    })
+}
+
 function searchFilter(){
     const searchInputElement = document.querySelector(".search-bar");
     const menuItemElements = document.querySelectorAll(".menu-item");
@@ -60,7 +92,7 @@ function filterFunc(){
 
     filterButtons.forEach(function(pressed){
         if(pressed.getAttribute("id") == filterStatus){
-            pressed.style.color = "red";
+            pressed.style.color = "#DE9355";
         }else{
             pressed.style.color = "white";
         }
@@ -69,7 +101,7 @@ function filterFunc(){
             filter = cat;
             filterButtons.forEach(function(x){
                 if(x == pressed){
-                    x.style.color = "red";
+                    x.style.color = "#DE9355";
                 }else{
                     x.style.color = "white";
                 }
