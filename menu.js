@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () { 
     searchFilter();
     filterFunc();
-    addToCart([]);
+    addToCart(getCartData());
 });
 
 
@@ -27,7 +27,19 @@ function navigateIndex(){
     window.location.href = "index.html"; 
 }
 function getCartData(){
-    
+    data = localStorage.getItem("cart")
+    if(data == null){
+        return [];
+    }else{
+        const itemQuantity = document.getElementById("itemQuantity");
+        var returned = JSON.parse(data)
+        var sum = 0;
+            returned.forEach(function(x){
+                sum += x[1];
+            })
+            itemQuantity.textContent = sum;
+        return returned;
+    } 
 }
 function addToCart(cart){
     const addButton = document.querySelectorAll(".menu-item button");
@@ -52,7 +64,12 @@ function addToCart(cart){
                 }
             }
 
-
+            localStorage.setItem("cart",JSON.stringify(cart));
+            var sum = 0;
+            cart.forEach(function(x){
+                sum += x[1];
+            })
+            itemQuantity.textContent = sum;
             console.log(cart);
         })
     })
