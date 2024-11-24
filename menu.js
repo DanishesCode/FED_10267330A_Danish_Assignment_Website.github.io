@@ -30,18 +30,28 @@ function searchFilter(){
     const searchInputElement = document.querySelector(".search-bar");
     const menuItemElements = document.querySelectorAll(".menu-item");
     const h2Elements = document.querySelectorAll(".menu-section h2");
+    const menu = document.querySelectorAll(".menu-section");
+    var list = [];
     searchInputElement.addEventListener("input", function () {
         const searchQueryText = searchInputElement.value.toLowerCase();
         let selected;
-        menuItemElements.forEach(function (menuItemElement) {
+        list = [];
+        menuItemElements.forEach(function (menuItemElement) { 
             const itemNameText = menuItemElement.querySelector(".item-name").textContent.toLowerCase();
             if (itemNameText.includes(searchQueryText)) {
                 menuItemElement.style.display = "block";
                 selected = menuItemElement;
+                list.push(selected.parentElement.parentElement);
             } else {
                 menuItemElement.style.display = "none"; 
             }
         });
+        menu.forEach(function(x){
+            x.style.display = "none";
+        })
+        list.forEach(function(itemElement){
+            itemElement.style.display = "block";
+        })
     });
 }
 function filterFunc(){
