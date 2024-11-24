@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 let filterStatus = "all";
 /*navigation functions*/
 function navigateMenu(){
@@ -47,9 +46,10 @@ function addToCart(cart){
     addButton.forEach(function(button){
         button.addEventListener("click",function(){
             let item = button.parentElement.querySelector("p").textContent; 
+            let itemPrice = button.textContent.substring(1);
             console.log(item);
             if(cart.length == 0){
-                cart.push([item,1])
+                cart.push([item,1,itemPrice])
             }else{
                 let selected = null;
                 cart.forEach(function(x){
@@ -58,7 +58,7 @@ function addToCart(cart){
                     }
                 })
                 if(selected == null){
-                    cart.push([item,1])
+                    cart.push([item,1,itemPrice])
                 }else{
                     selected[1] +=1;
                 }
