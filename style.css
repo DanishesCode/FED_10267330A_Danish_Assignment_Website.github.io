@@ -563,6 +563,9 @@ h5{
     font-size:2vw;
     margin-left:25%;
   }
+  #discount{
+    display:none;
+  }
   /*end of checkout*/
 .tracking-container{
     width:100%;
