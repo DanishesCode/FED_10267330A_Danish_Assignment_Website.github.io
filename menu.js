@@ -1,12 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { 
     searchFilter();
     filterFunc();
 });
 
 
 
-/*values*/
-let filter = "all";
+let filterStatus = "all";
+console.log(filterStatus);
 /*navigation functions*/
 function navigateMenu(){
     window.location.href = "menu.html"; 
@@ -29,6 +29,7 @@ function navigateIndex(){
 function searchFilter(){
     const searchInputElement = document.querySelector(".search-bar");
     const menuItemElements = document.querySelectorAll(".menu-item");
+    const h2Elements = document.querySelectorAll(".menu-section h2");
     searchInputElement.addEventListener("input", function () {
         const searchQueryText = searchInputElement.value.toLowerCase();
         let selected;
@@ -40,23 +41,19 @@ function searchFilter(){
             } else {
                 menuItemElement.style.display = "none"; 
             }
-            
-            filter = selected.dataset.category;
         });
     });
 }
 function filterFunc(){
     const filterButtons = document.querySelectorAll(".filterContainer button");
-    filterButtons.forEach(function(x){
-        if(x.getAttribute(id) == filter){
-            x.style.color = "red";
-        }else{
-            x.style.color = "white";
-        }
-    })
-
+    const menuContentCat = document.querySelectorAll(".menu-section");
 
     filterButtons.forEach(function(pressed){
+        if(pressed.getAttribute("id") == filterStatus){
+            pressed.style.color = "red";
+        }else{
+            pressed.style.color = "white";
+        }
         pressed.addEventListener("click",function(){
             const cat = pressed.getAttribute("id");
             filter = cat;
@@ -65,6 +62,14 @@ function filterFunc(){
                     x.style.color = "red";
                 }else{
                     x.style.color = "white";
+                }
+            })
+            menuContentCat.forEach(function(item){
+                if(item.dataset.category == filter || filter == "all"){
+                    item.style.display = "block";
+                }
+                else{
+                    item.style.display = "none";
                 }
             })
             
