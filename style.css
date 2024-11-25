@@ -9,6 +9,7 @@ body{
     align-items: center;
 }
 h1{
+    margin-top:10%;
     color:white;
     font-family: "Jaro";
     font-size:5vw;
@@ -690,8 +691,7 @@ h5{
 }
 
 /*end of payment*/
-  
-  
+
 @media screen and (max-width: 667px) {
     nav{
         background-color: #fff;

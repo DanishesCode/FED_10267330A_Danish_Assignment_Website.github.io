@@ -38,7 +38,7 @@ function getCartData(){
 }
 function initMap() {
     let map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -34.397, lng: 150.644 }, // Set the latitude and longitude for the center
-      zoom: 8, // Zoom level (1 is world view, higher numbers zoom in)
+      center: { lat: 1.3521, lng: 103.8198 }, 
+      zoom: 12, 
     });
   }
