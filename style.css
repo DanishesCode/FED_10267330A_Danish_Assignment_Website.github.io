@@ -449,7 +449,7 @@ h5{
   }
   
   .item {
-    display:flex;
+    display:none;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
