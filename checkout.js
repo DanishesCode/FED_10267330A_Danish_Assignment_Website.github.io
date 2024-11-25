@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () { 
-    var cart = getCartData();
-    calculateInCart(cart);
-    checkDiscount(cart);
-    listCartContent(cart);
+    calculateInCart(getCartData());
+    checkDiscount(getCartData());
+    listCartContent(getCartData());
+    add();
+    minus();
+    console.log(getCartData());
 });
 
 
@@ -74,7 +76,7 @@ function checkDiscount(cart){
             discountShower.style.display = "flex";
             discountShower.querySelector("span").textContent = "$"+discountSelected[1];
             let total = calculateInCart(cart);
-            totalPay.textContent = "$"+(total-discountSelected[1]);
+            totalPay.textContent = "$"+Math.round((total-discountSelected[1])*100)/100;
         }
         
      })
@@ -89,8 +91,53 @@ function listCartContent(cart){
         let price = clone.querySelector(".item-price");
         name.textContent = content[0];
         quantity.textContent = content[1];
-        price.textContent = "$"+(content[1]*content[2]);
+        price.textContent = "$"+Math.round((content[1]*content[2])*100)/100;
         clone.style.display = "flex";
         container.appendChild(clone);
+        template.remove();
+    })
+}
+function add(){
+    const addButtons = document.querySelectorAll(".item-quantity .add");
+    addButtons.forEach(function(x){
+        x.addEventListener("click",function(){
+            cart = getCartData();
+            var item = x.parentElement.parentElement.querySelector("span").textContent;
+            cart.forEach(function(y){
+                if(y[0] == item){
+                    y[1] +=1;
+                    x.parentElement.querySelector("span").textContent = y[1];
+                    x.parentElement.parentElement.querySelector(".item-price").textContent = "$"+Math.round((y[1]*y[2])*100)/100;
+                    console.log(y[1]*y[2]);
+                }
+            })
+            
+            localStorage.setItem("cart",JSON.stringify(cart));
+            calculateInCart(cart);
+        })
+    })
+}
+function minus(){
+    const minusButtons = document.querySelectorAll(".item-quantity .minus");
+    minusButtons.forEach(function(x){
+        x.addEventListener("click",function(){
+            cart = getCartData();
+            var item = x.parentElement.parentElement.querySelector("span").textContent;
+            cart.forEach(function(y){
+                if(y[0] == item && y[1] != 1){
+                    y[1] -=1;
+                    x.parentElement.querySelector("span").textContent = y[1];
+                    x.parentElement.parentElement.querySelector(".item-price").textContent = "$"+Math.round((y[1]*y[2])*100)/100;
+                    console.log(y[1]*y[2]);
+                }else if(y[0] == item && y[1] == 1){
+                    x.parentElement.parentElement.remove();
+                    cart.splice(cart.indexOf(y),1);
+                    console.log(cart);
+                }
+            })
+            
+            localStorage.setItem("cart",JSON.stringify(cart));
+            calculateInCart(cart);
+        })
     })
 }
