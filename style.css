@@ -590,6 +590,7 @@ h5{
 }
 
 .track-container{
+    display:none;
     background-color: #fff;
     width:60%;
     height:100%;
