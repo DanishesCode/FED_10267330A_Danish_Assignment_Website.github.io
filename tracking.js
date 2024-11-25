@@ -24,7 +24,7 @@ function trackDisplay(){
     var reasonings = ["Currently being delivered","Kitchen is  preparing your order","There has been a delay for your order"];
     var data = localStorage.getItem("tracking");
     if(data == null){
-        alert("There is no data!");
+        alert("There is no data in the serverStorage! Please order something to fix this.");
     }else{
         data = JSON.parse(data);
         const input = document.querySelector(".head input");
