@@ -22,16 +22,16 @@
         <img id = "hamburgerMenu"  src = "Images/Menu.png" alt = "Hamburger Menu">
     </nav>
     <h1>Contact us</h1>
-    <div id = "contactContainer">
+    <form id = "contactContainer">
         <div id="messageDropper">
             <h3 id = "labelDropper">Drop us a message</h3>
             <div id = "inputContainer">
-                <input class = "inputBox" type= "text" name="message" placeholder="Your name">
-                <input class = "inputBox" type="email" name="message" placeholder="Your email">
-                <input id = "message" type="text" name="message" placeholder="Type your message here">
+                <input class = "inputBox" type= "text" name="message" placeholder="Your name" required>
+                <input class = "inputBox" type="email" name="message" placeholder="Your email" required>
+                <input id = "message" type="text" name="message" placeholder="Type your message here" required>
             </div>  
             <input id = "submitMessage" type="submit" name="message" value="Send" >
-        </div>
+        </form>
         <div id = "contactInfo">
             <div class = "infoSlot">
                 <img class ="iconInfo" src = "Images/Location.png" alt = "Location icon">

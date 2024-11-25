@@ -618,8 +618,66 @@ h5{
     font-size:2vw;
     text-align:center;
 }
+/*end of tracking*/
 
-    
+.payment-wrapper {
+  margin-left:auto;
+  margin-right:auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.payment-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.payment-input {
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.payment-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.payment-button {
+  padding: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-button:hover {
+  background-color: #0056b3;
+}
+
+/*end of payment*/
   
   
 @media screen and (max-width: 667px) {
