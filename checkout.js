@@ -61,10 +61,10 @@ function checkDiscount(cart){
     const totalPay = document.getElementById("totalPay");
      button.addEventListener("click",function(){
         discountCode = document.querySelector(".discount input").value;
-        var discountSelected = null;cloneNode(true);
+        var discountSelected = null;
         discountCodeList.forEach(function(x){
             if(x[0] == discountCode){
-                discountSelected = x
+                discountSelected = x;
             }
         })
         if(discountSelected == null){
