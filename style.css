@@ -449,10 +449,11 @@ h5{
   }
   
   .item {
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .item-details {
@@ -490,6 +491,7 @@ h5{
   .item-price {
     font-weight: bold;
     font-size: 20px; 
+    text-align: left;
   }
   
   .discount {

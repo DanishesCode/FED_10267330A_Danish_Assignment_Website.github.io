@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var cart = getCartData();
     calculateInCart(cart);
     checkDiscount(cart);
+    listCartContent(cart);
 });
 
 
@@ -60,7 +61,7 @@ function checkDiscount(cart){
     const totalPay = document.getElementById("totalPay");
      button.addEventListener("click",function(){
         discountCode = document.querySelector(".discount input").value;
-        var discountSelected = null;
+        var discountSelected = null;cloneNode(true);
         discountCodeList.forEach(function(x){
             if(x[0] == discountCode){
                 discountSelected = x
@@ -77,4 +78,19 @@ function checkDiscount(cart){
         }
         
      })
+}
+function listCartContent(cart){
+    const template = document.getElementById("checkout-template");
+    const container = document.querySelector(".checkout-content");
+    cart.forEach(function(content){/*[name,quantity,price]*/
+        var clone = template.cloneNode(true);
+        let name = clone.querySelector(".item-details #label");
+        let quantity = clone.querySelector(".item-quantity span");
+        let price = clone.querySelector(".item-price");
+        name.textContent = content[0];
+        quantity.textContent = content[1];
+        price.textContent = "$"+(content[1]*content[2]);
+        clone.style.display = "flex";
+        container.appendChild(clone);
+    })
 }
