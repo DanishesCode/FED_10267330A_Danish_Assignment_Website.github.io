@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     listCartContent(getCartData());
     add();
     minus();
-    console.log(getCartData());
+    toPay();
 });
 
 /*navigation functions*/
@@ -25,6 +25,9 @@ function navigateCheckout(){
 }
 function navigateIndex(){
     window.location.href = "index.html"; 
+}
+function navigatePayment(){
+    window.location.href = "payment.html";
 }
 
 function getCartData(){
@@ -143,5 +146,13 @@ function minus(){
             localStorage.setItem("cart",JSON.stringify(cart));
             calculateInCart(cart);
         })
+    })
+}
+function toPay(){
+    var payButton = document.querySelector(".checkout-container .pay-button");
+    payButton.addEventListener("click",function(){
+        var amount = document.querySelector(".totals p .payable").textContent.substring(1);
+        localStorage.setItem("amount",amount);
+        navigatePayment();
     })
 }
