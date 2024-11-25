@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () { 
-    calculateInCart(getCartData());
-    checkDiscount(getCartData());
+    calculateInCart();
+    checkDiscount();
     listCartContent(getCartData());
     add();
     minus();
@@ -43,18 +43,19 @@ function getCartData(){
         return returned;
     } 
 }
-function calculateInCart(cart){
+function calculateInCart(){
+    cart = getCartData();
     sum = 0;
     const totalCart = document.getElementById("totalCart");
     const totalPay = document.getElementById("totalPay");
     cart.forEach(function(x){
         sum += x[1]*x[2];
     })
-    totalCart.textContent = "$"+sum;
-    totalPay.textContent = "$" +sum;
-    return sum;
+    totalCart.textContent = "$"+sum.toFixed(2);
+    totalPay.textContent = "$" +sum.toFixed(2);
+    return sum.toFixed(2);
 }
-function checkDiscount(cart){
+function checkDiscount(){
     discountCodeList = [
         ["Danish123",2],
         ["PizzaHutSaver",10]
@@ -75,8 +76,8 @@ function checkDiscount(cart){
             const discountShower = document.getElementById("discount");
             discountShower.style.display = "flex";
             discountShower.querySelector("span").textContent = "$"+discountSelected[1];
-            let total = calculateInCart(cart);
-            totalPay.textContent = "$"+Math.round((total-discountSelected[1])*100)/100;
+            let total = calculateInCart();
+            totalPay.textContent = "$"+(total-discountSelected[1]).toFixed(2);
         }
         
      })
@@ -91,13 +92,14 @@ function listCartContent(cart){
         let price = clone.querySelector(".item-price");
         name.textContent = content[0];
         quantity.textContent = content[1];
-        price.textContent = "$"+Math.round((content[1]*content[2])*100)/100;
+        price.textContent = "$"+(content[1]*content[2]).toFixed(2);
         clone.style.display = "flex";
         container.appendChild(clone);
         template.remove();
     })
 }
 function add(){
+    const discountShower = document.getElementById("discount");
     const addButtons = document.querySelectorAll(".item-quantity .add");
     addButtons.forEach(function(x){
         x.addEventListener("click",function(){
@@ -107,17 +109,18 @@ function add(){
                 if(y[0] == item){
                     y[1] +=1;
                     x.parentElement.querySelector("span").textContent = y[1];
-                    x.parentElement.parentElement.querySelector(".item-price").textContent = "$"+Math.round((y[1]*y[2])*100)/100;
+                    x.parentElement.parentElement.querySelector(".item-price").textContent = "$"+(y[1]*y[2]).toFixed(2);
                     console.log(y[1]*y[2]);
                 }
             })
-            
+            discountShower.style.display = "none";
             localStorage.setItem("cart",JSON.stringify(cart));
             calculateInCart(cart);
         })
     })
 }
 function minus(){
+    const discountShower = document.getElementById("discount");
     const minusButtons = document.querySelectorAll(".item-quantity .minus");
     minusButtons.forEach(function(x){
         x.addEventListener("click",function(){
@@ -135,7 +138,7 @@ function minus(){
                     console.log(cart);
                 }
             })
-            
+            discountShower.style.display = "none";
             localStorage.setItem("cart",JSON.stringify(cart));
             calculateInCart(cart);
         })
