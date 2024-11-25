@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(getCartData());
 });
 
-
 /*navigation functions*/
 function navigateMenu(){
     window.location.href = "menu.html"; 
@@ -85,13 +84,15 @@ function checkDiscount(){
 function listCartContent(cart){
     const template = document.getElementById("checkout-template");
     const container = document.querySelector(".checkout-content");
-    cart.forEach(function(content){/*[name,quantity,price]*/
+    cart.forEach(function(content){/*[name,quantity,price,image]*/
         var clone = template.cloneNode(true);
         let name = clone.querySelector(".item-details #label");
         let quantity = clone.querySelector(".item-quantity span");
         let price = clone.querySelector(".item-price");
+        let image = clone.querySelector(".item-details img");
         name.textContent = content[0];
         quantity.textContent = content[1];
+        image.src = content[3];
         price.textContent = "$"+(content[1]*content[2]).toFixed(2);
         clone.style.display = "flex";
         container.appendChild(clone);
