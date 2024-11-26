@@ -8,19 +8,20 @@
   <script src="checkout.js"></script>
 </head>
 <body>
-    <nav>
-        <img id = "logo" src ="Images/Logo.png" alt = "PizzaHut logo" onclick="navigateIndex()">
-        <ul>
-            <button class = "navButtons" onclick="navigateMenu()">Menu</button>
-            <button class = "navButtons" onclick =  "navigateLocation()">Locations</button>
-            <button class = "navButtons" onclick = "navigateContact()">Contact</button>
-            <button class = "navButtons" onclick = "navigateTracking()">Tracking</button>
-        </ul>
-        <div id = "cart" onclick="navigateCheckout()">
-            <div id = "itemQuantity">0</div>
-        </div>
-        <img id = "hamburgerMenu"  src = "Images/Menu.png" alt = "Hamburger Menu">
-    </nav>
+  <nav>
+    <img id = "logo" src ="Images/Logo.png" alt = "PizzaHut logo" onclick="navigateIndex()">
+    <ul>
+        <button class = "navButtons" onclick="navigateMenu()">Menu</button>
+        <button class = "navButtons" onclick =  "navigateLocation()">Locations</button>
+        <button class = "navButtons" onclick = "navigateContact()">Contact</button>
+        <button class = "navButtons" onclick = "navigateTracking()">Tracking</button>
+    </ul>
+    <div id = "cart" onclick="navigateCheckout()">
+        <div id = "itemQuantity">0</div>
+    </div>
+    <img id = "hamburgerMenu"  src = "Images/Menu.png" alt = "Hamburger Menu">
+    <p id = "close">✖</p>
+</nav>
   <div class="checkout-container">
     <h1>Checkout</h1>
     <div class="label-heading">
