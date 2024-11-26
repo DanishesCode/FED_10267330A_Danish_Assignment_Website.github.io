@@ -94,7 +94,13 @@ ul{
 }
 #hamburgerMenu{
     display:none;
-}/*end of navbar*/
+}
+#close{
+  display:none;
+  height: 100%;
+  bottom:10px;
+}
+/*end of navbar*/
 .firstContainer{
     position:relative;
     height:50%;
@@ -749,6 +755,13 @@ h5{
         position:absolute;
         display:block;
         left:85%;
+    }
+    #close{
+      display:none;
+      position:absolute;
+      left:85%;
+      font-size: 50px;
+      margin:0;
     }
     #bestSellerLabel{
         margin-top:15%;
