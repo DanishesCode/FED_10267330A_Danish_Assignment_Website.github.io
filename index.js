@@ -27,8 +27,8 @@ function getCartData(){
         return [];
     }else{
         const itemQuantity = document.getElementById("itemQuantity");
-        var returned = JSON.parse(data)
-        var sum = 0;
+        let returned = JSON.parse(data)
+        let sum = 0;
             returned.forEach(function(x){
                 sum += x[1];
             })

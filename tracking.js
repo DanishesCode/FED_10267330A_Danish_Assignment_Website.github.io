@@ -23,8 +23,8 @@ function navigateIndex(){
     window.location.href = "index.html"; 
 }
 function trackDisplay(){
-    var reasonings = ["Currently being delivered","Kitchen is  preparing your order","There has been a delay for your order"];
-    var data = localStorage.getItem("tracking");
+    let reasonings = ["Currently being delivered","Kitchen is  preparing your order","There has been a delay for your order"];
+    let data = localStorage.getItem("tracking");
     if(data == null){
         alert("There is no data in the serverStorage! Please order something to fix this.");
     }else{
@@ -34,8 +34,8 @@ function trackDisplay(){
         input.addEventListener("keydown",function(event){
             if(event.key == "Enter"){
                 console.log("Enter pressed");
-                var select = null;
-                var id = input.value;
+                let select = null;
+                let id = input.value;
                 data.forEach(function(x){
                     if(x==id){
                         select = x;
@@ -61,8 +61,8 @@ function getCartData(){
         return [];
     }else{
         const itemQuantity = document.getElementById("itemQuantity");
-        var returned = JSON.parse(data)
-        var sum = 0;
+        let returned = JSON.parse(data)
+        let sum = 0;
             returned.forEach(function(x){
                 sum += x[1];
             })

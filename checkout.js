@@ -37,8 +37,8 @@ function getCartData(){
         return [];
     }else{
         const itemQuantity = document.getElementById("itemQuantity");
-        var returned = JSON.parse(data)
-        var sum = 0;
+        let returned = JSON.parse(data)
+        let sum = 0;
             returned.forEach(function(x){
                 sum += x[1];
             })
@@ -67,7 +67,7 @@ function checkDiscount(){
     const totalPay = document.getElementById("totalPay");
      button.addEventListener("click",function(){
         discountCode = document.querySelector(".discount input").value;
-        var discountSelected = null;
+        let discountSelected = null;
         discountCodeList.forEach(function(x){
             if(x[0] == discountCode){
                 discountSelected = x;
@@ -89,7 +89,7 @@ function listCartContent(cart){
     const template = document.getElementById("checkout-template");
     const container = document.querySelector(".checkout-content");
     cart.forEach(function(content){/*[name,quantity,price,image]*/
-        var clone = template.cloneNode(true);
+        let clone = template.cloneNode(true);
         let name = clone.querySelector(".item-details #label");
         let quantity = clone.querySelector(".item-quantity span");
         let price = clone.querySelector(".item-price");
@@ -109,7 +109,7 @@ function add(){
     addButtons.forEach(function(x){
         x.addEventListener("click",function(){
             cart = getCartData();
-            var item = x.parentElement.parentElement.querySelector("span").textContent;
+            let item = x.parentElement.parentElement.querySelector("span").textContent;
             cart.forEach(function(y){
                 if(y[0] == item){
                     y[1] +=1;
@@ -130,7 +130,7 @@ function minus(){
     minusButtons.forEach(function(x){
         x.addEventListener("click",function(){
             cart = getCartData();
-            var item = x.parentElement.parentElement.querySelector("span").textContent;
+            let item = x.parentElement.parentElement.querySelector("span").textContent;
             cart.forEach(function(y){
                 if(y[0] == item && y[1] != 1){
                     y[1] -=1;
@@ -150,9 +150,9 @@ function minus(){
     })
 }
 function toPay(){
-    var payButton = document.querySelector(".checkout-container .pay-button");
+    let payButton = document.querySelector(".checkout-container .pay-button");
     payButton.addEventListener("click",function(){
-        var amount = document.querySelector(".totals p .payable").textContent.substring(1);
+        let amount = document.querySelector(".totals p .payable").textContent.substring(1);
         localStorage.setItem("amount",amount);
         navigatePayment();
     })

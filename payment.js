@@ -5,14 +5,14 @@ function getAmount(){
     return localStorage.getItem("amount");
 }
 function getRandomTracking(){
-    var data = localStorage.getItem("tracking");
-    var  list;
+    let data = localStorage.getItem("tracking");
+    let  list;
     if (data == null){
         list = [];
     }else{
         list = JSON.parse(localStorage.getItem("tracking"));
     }
-    var trackingId = Math.floor(Math.random()*999999);
+    let trackingId = Math.floor(Math.random()*999999);
     list.push(trackingId);
     localStorage.setItem("tracking",JSON.stringify(list));
     console.log(list);

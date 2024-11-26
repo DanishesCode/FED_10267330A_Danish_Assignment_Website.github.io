@@ -32,8 +32,8 @@ function getCartData(){
         return [];
     }else{
         const itemQuantity = document.getElementById("itemQuantity");
-        var returned = JSON.parse(data)
-        var sum = 0;
+        let returned = JSON.parse(data)
+        let sum = 0;
             returned.forEach(function(x){
                 sum += x[1];
             })
@@ -67,7 +67,7 @@ function addToCart(cart){
             }
 
             localStorage.setItem("cart",JSON.stringify(cart));
-            var sum = 0;
+            let sum = 0;
             cart.forEach(function(x){
                 sum += x[1];
             })
@@ -82,7 +82,7 @@ function searchFilter(){
     const menuItemElements = document.querySelectorAll(".menu-item");
     const h2Elements = document.querySelectorAll(".menu-section h2");
     const menu = document.querySelectorAll(".menu-section");
-    var list = [];
+    let list = [];
     searchInputElement.addEventListener("input", function () {
         const searchQueryText = searchInputElement.value.toLowerCase();
         let selected;
