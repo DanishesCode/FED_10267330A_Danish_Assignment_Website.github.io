@@ -318,108 +318,106 @@ ul{
 
 
 /*end of index*/
-#contactContainer{
-    margin-left:auto;
-    margin-right:auto;
-    width:100%;
-    height:100%;}
- #submitMessage:hover{
-  cursor: pointer;
-  background-color: #C40C0C;
+#contactContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #000;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  gap: 20px;
+  min-height: 100vh;
 }
 
-#messageDropper{
-    position:relative;
-    background-color: white;
-    height:100vh;
-    width:70%;
-    border-radius: 30px;
-    margin-left:auto ;
-    margin-right:5%;
-    top:2%;
+#contactInfo {
+  background-color: #e20001;
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 35%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-h3{
-    font-size:3vw;
-    font-family:"Jaro";
-    font-weight: normal;
-    text-align: center;
+
+.infoSlot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-#inputContainer{
-    height:50%;
-    width:50%;
-    margin-left:auto;
-    margin-right:5%;
-    grid-column: auto;
+
+.iconInfo {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
 }
-#labelDropper{
-    position:relative;
-    top:30px;
+
+.iconInfo:hover {
+  transform: scale(1.2);
 }
-.inputBox{
-    height:20%;
-    width:100%;
-    border-radius: 30px;
-    margin-top:30px;
-    background-color: #D9D9D9;
-    font-size:2vw;
+
+#contactInfo h5 {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
 }
-.inputBox::placeholder{
-    color:white;
-    font-family:"Jaro";
-    font-weight: normal;
+
+#messageDropper {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-#message{
-    width:100%;
-    height:50%;
-    border-radius:30px;
-    margin-top:30px;
-    background-color: #D9D9D9;
-    font-size:2vw;
+
+#labelDropper {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
 }
-#message::placeholder{
-    color:white;
-    font-family:"Jaro";
-    font-weight: normal;
+
+.inputBox,
+#message {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  color: #000;
 }
-#submitMessage{
-    position:relative;
-    height:10vw;
-    width:20vw;
-    border-radius: 30px;
-    left:40%;
-    margin-top:10%;
-    background-color:#FF0303;
-    font-family: "Jaro";
-    color:white;
-    font-size:3vw;
+
+#message {
+  height: 100px;
+  resize: none;
 }
-#contactInfo{
-    position:absolute;
-    background-color: #FF0303;
-    border-radius: 30px;
-    width:30vw;
-    top:15%;
-    margin-left:-10%;
-    height:70%;
-    align-content: center;
-    margin-right:auto;
+
+#submitMessage {
+  width: 100%;
+  padding: 12px;
+  background-color: #e20001;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
-.iconInfo{
-    height:2vw;
-    width:2vw;
+
+#submitMessage:hover {
+  background-color: #c70001;
 }
-h5{
-    color:white;
-    font-family: "Jaro";
-    font-weight:normal;
-    font-size:1.5vw;
-    width:80%;
-}
-.infoSlot{
-    display:flex;
-    flex-direction: row;
- 
-}
+
+
+
 /*end of contact*/
   
   .menu-container {
@@ -924,6 +922,7 @@ h5{
         font-size: 1.4em;
         font-family: "Jaro";
         font-weight: normal;
+        
     
     }
     #cart{
@@ -967,28 +966,15 @@ h5{
         margin-bottom:1vh;
     }
     /*end of index*/
-    #submitMessage{
-        margin-left:auto;
-        height:10%;
-        top: 10%;
-        width:40%;
-    }
-    #messageDropper{
-        height:75vh;
-    }
-    h5{
-        font-size:2vw;
-    }
-    .iconInfo{
-        height:3vw;
-        width:3vw;
-    }
-    .inputBox{
-        font-size:3vw;
-    }
-    #message{
-        font-size:3vw;
-    }
+    #contactContainer {
+      flex-direction: column;
+      gap: 30px;
+  }
+
+  #contactInfo,
+  #messageDropper {
+      width: 100%;
+  }
     /*end of contact*/
     .filterContainer button{
         font-size:3vw;
