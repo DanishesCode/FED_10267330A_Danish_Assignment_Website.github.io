@@ -754,6 +754,13 @@ h5{
   font-size: 12px;
   color: #ccc;
 }
+.dragging{
+  position: absolute;
+  transform-origin: center;
+  z-index: 10;
+  transform: translate(calc(100vw - 150px), -calc(100vh - 150px)) scale(0.2);
+  opacity: 0;
+}
 
 
 @media screen and (max-width: 667px) {

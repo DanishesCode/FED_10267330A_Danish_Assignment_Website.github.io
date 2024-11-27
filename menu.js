@@ -49,6 +49,8 @@ function addToCart(cart){
             let item = button.parentElement.querySelector("p").textContent; 
             let itemPrice = button.textContent.substring(1);
             let image = button.parentElement.querySelector("img").getAttribute("src");
+            let img = button.parentElement.querySelector("img");
+            animateToCart(img);
             console.log(item);
             if(cart.length == 0){
                 cart.push([item,1,itemPrice,image])
@@ -108,7 +110,6 @@ function searchFilter(){
 function filterFunc(){
     const filterButtons = document.querySelectorAll(".filterContainer button");
     const menuContentCat = document.querySelectorAll(".menu-section");
-
     filterButtons.forEach(function(pressed){
         if(pressed.getAttribute("id") == filterStatus){
             pressed.style.color = "#DE9355";
@@ -166,3 +167,34 @@ function displayMenu(){
         }
     })
     }
+    
+    function animateToCart(image) {
+        const clonedImage = image.cloneNode(true);
+      
+        const imageRect = image.getBoundingClientRect();
+ 
+        clonedImage.style.position = "absolute";
+        clonedImage.style.left = `${imageRect.left + window.scrollX}px`;
+        clonedImage.style.top = `${imageRect.top + window.scrollY}px`;
+        clonedImage.style.width = `${imageRect.width}px`;
+        clonedImage.style.height = `${imageRect.height}px`;
+        clonedImage.style.transition = "transform 0.8s ease, opacity 0.8s ease";
+        clonedImage.style.zIndex = "1000";
+      
+        document.body.appendChild(clonedImage);
+      
+        const cartRect = cart.getBoundingClientRect();
+
+        const translateX = cartRect.left + cartRect.width / 2 - (imageRect.left + imageRect.width / 2);
+        const translateY = cartRect.top + cartRect.height / 2 - (imageRect.top + imageRect.height / 2);
+      
+        setTimeout(() => {
+          clonedImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(0.2)`;
+          clonedImage.style.opacity = "0";
+        }, 10);
+      
+        clonedImage.addEventListener("transitionend", () => {
+          clonedImage.remove();
+          updateCartCount();
+        });
+      }
