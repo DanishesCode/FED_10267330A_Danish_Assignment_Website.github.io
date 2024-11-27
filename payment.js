@@ -25,8 +25,10 @@ function pay(){
     payButton.textContent = "Pay $"+amount;
     form.addEventListener("submit",function(){
         localStorage.removeItem("cart");
-        window.location.href = "index.html"; 
-        alert("Successful payment! your tracking id is: "+getRandomTracking());
+        window.location.href = "success.html"; 
+        let id = getRandomTracking();
+        localStorage.setItem("currentTracking",id)
+        alert("Successful payment");
     })
     
     

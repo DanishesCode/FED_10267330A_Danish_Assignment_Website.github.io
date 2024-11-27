@@ -839,6 +839,47 @@ h5{
   transform: translate(calc(100vw - 150px), -calc(100vh - 150px)) scale(0.2);
   opacity: 0;
 }
+/*end of footer*/
+
+
+
+#payment-container {
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:200px;
+  margin-bottom:auto;
+  color:white;
+  max-width: 600px;
+  padding: 30px;
+  background-color: #1a1a1a; 
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  margin-top: 20px;
+  color: #32cd32; 
+}
+
+p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#tracking-id-container {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+#tracking-id {
+  font-weight: bold;
+  color: #32cd32; /* Green color for tracking ID */
+}
+
+
+
 
 
 @media screen and (max-width: 667px) {
