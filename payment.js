@@ -21,13 +21,22 @@ function getRandomTracking(){
 
 function pay(){
     let container = document.getElementById("lottie");
-    let animation = lottie.loadAnimation({
+    let container2 = document.getElementById("lottie2");
+    let sendingAnimation = lottie.loadAnimation({
         container: container,  
+        renderer: 'svg', 
+        loop: false, 
+        autoplay: false, 
+        path: 'animation/sending.json'  
+    });
+    let successAnimation = lottie.loadAnimation({
+        container: container2,  
         renderer: 'svg', 
         loop: false, 
         autoplay: false, 
         path: 'animation/tick.json'  
     });
+    
     const payButton = document.querySelector(".payment-form button");
     const form = document.querySelector("form");
     amount = getAmount();
@@ -35,14 +44,19 @@ function pay(){
     form.addEventListener("submit",function(x){
         x.preventDefault();
         container.style.display = "block";
-        animation.play();
+        sendingAnimation.play();
         container.style.display = "block";
-        animation.addEventListener('complete', function () {
-        container.style.display = "none";
-        localStorage.removeItem("cart");
-        window.location.href = "success.html"; 
-        let id = getRandomTracking();
-        localStorage.setItem("currentTracking",id);
+        sendingAnimation.addEventListener('complete', function () {
+            container.style.display = "none";
+            container2.style.display = "block";
+            successAnimation.play();
+            successAnimation.addEventListener('complete',function(){
+                container.style.display = "none";
+                localStorage.removeItem("cart");
+                window.location.href = "success.html"; 
+                let id = getRandomTracking();
+                localStorage.setItem("currentTracking",id);
+            })
         });
     })
 }
