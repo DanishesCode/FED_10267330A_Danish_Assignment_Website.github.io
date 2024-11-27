@@ -239,6 +239,84 @@ ul{
     cursor: pointer;
     background-color: #C40C0C;
 }
+/* Stats Section */
+.stats-section {
+  background-color: #000;
+  color: #fff; 
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h2 {
+  font-size: 3rem;
+  margin: 0;
+  color: #fcca03; 
+}
+
+.stat-item p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  color: #e60012; 
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+
+
+
+.reviews-section {
+  margin-right:30px;
+  margin-left:30px;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  justify-content: center;
+}
+
+.review-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  min-height: 150px; 
+}
+
+.review-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.review-author {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+}
+
+
+
+
+
 /*end of index*/
 #contactContainer{
     margin-left:auto;
