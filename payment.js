@@ -21,7 +21,7 @@ function getRandomTracking(){
 
 function pay(){
     let container = document.getElementById("lottie");
-    var animation = lottie.loadAnimation({
+    let animation = lottie.loadAnimation({
         container: container,  
         renderer: 'svg', 
         loop: false, 
