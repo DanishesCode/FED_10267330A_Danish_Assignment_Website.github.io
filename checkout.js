@@ -78,9 +78,10 @@ function checkDiscount(){
         }else{
             const discountShower = document.getElementById("discount");
             discountShower.style.display = "flex";
-            discountShower.querySelector("span").textContent = "$"+discountSelected[1];
+            discountShower.querySelector("span").textContent = "-$"+discountSelected[1];
             let total = calculateInCart();
             totalPay.textContent = "$"+(total-discountSelected[1]).toFixed(2);
+            discountShower.querySelector("span").style.color = "red";
         }
         
      })
