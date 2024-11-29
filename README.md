@@ -12,38 +12,80 @@ As a user type, I want to perform an action, so that I can achieve a goal.
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory) Include the Adobe XD wireframe as a folder. You can include the XD share url.
 
 Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+Navbar:
+This navbar is a fixed position which allows users to switch between
+pages hassle free.When in mobile view, the navbar will have a hamburger
+menu for you to click instead of squeezing all the content into 
+one bar but it will be switched to a column instead of row.
 
-Features Left to Implement
-Another feature idea
-Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+ReviewSection(in index):
+This reviewsection let the potential buyers have a easier mind to buy pizza from here
+as there are many good reviews and good status associated with this website.
 
-JQuery
-The project uses JQuery to simplify DOM manipulation.
-Testing
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+SearchBar:
+This searchbar is useful for users to find for a specifc item they want to order
+which saves them time rather than scrolling to find the items. This search bar
+was made via looping through a list after any input is detected.
 
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+SearchFilter:
+This filter is almost similar to the searchBar but it is different as you can press
+and categorize each variation individually. By doing so, this will help users to select 
+a category they want. How i implemented this was also similar, I would give each div an
+attribute and it loops through the elements. Using flexbox so when Display:None is use on the rest of
+the div, the div that I want will automatically get pushed up.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+AddToCart Button:
+This addtocart button on each product allows users to place the food they want into the shopping cart
+on the top right. Animations are also used for seamless design. Animations are made by cloning the image
+of the product and resizing it and transforming its position to the cart's position within (x) duration.
+Items are then saved into the localstorage with an Array(not a dictionary) using this format [name,quantity,price,image] which
+will be stringified to be saved.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+Locations page:
+This page allows users to discover various pizzahut locations nearby them using the google map api(https://developers.google.com/maps)
+users are able to navigate through the map to find their routes to the pizzahuts.
+
+Contact us page:
+This contact us page is made so that users could get contact information and also send messages for help via the website. This is made
+by forms and there is validation whether you have filled in all the blanks and whether your email actually exists. Once validation has
+passed they are allowed to submit the form.
+
+Tracking page:
+This tracking allows users to know when their order is going to arrive approximately. How this works is by saving tracking orders inside
+the localStorage after customers make their orders, looping through the saved tracking orders and returning whether the tracking
+id provided by the customer exists. If it doesnt exist, an alert will pop up but if it exists, the website will provide you with the status
+and ETA of your delivery and this status and ETA are randomized.
+
+Checkout:
+This page allows users to add or remove their items that they want to order. This page receives data from the localStorage array
+cart which was saved from the addtocart button and will clone a template div and fill in the blanks. The cloned div will then be
+appended to the container which is flexbox which arranges itself nicely and the total will be calculated as well.
+
+Discount: 
+This feature allows users to apply a discount which is represented in an array. Once a user selects the correct discount the total
+will be deducted accordingly. This feature also uses looping to make sure that the user's discount code is valid or else it will return
+an alert.The subtotal will then be saved into the localStorage.
+
+Secure payment page:
+This feature allows users to make payment securely. This form validates all information before letting the user submit it. The pay button
+also receives the amount from the lpcalStorage that is saved and will be displayed. Once validation finishes and user presses submit, 2
+lottiefile animations will play one after the other. The first one will play after submitting, the 2nd one will play after detecting that the first
+one has finished playing. After that it will redirect you to a successful payment page providing and generating you with a tracking id which
+is being saved in an array into the localStorage.
+
+
+
 
 Credits
+https://chatgpt.com/
+https://www.w3schools.com/
+https://stackoverflow.com/
 Content
-The text for section Y was copied from the Wikipedia article Z
+SearchBar,Google maps were copied from chatgpt
+Learned a few things from w3schools
+Some solutions were taken and modified from stackoverflow
 Media
-The photos used in this site were obtained from ...
+The photos used in this site were obtained from https://icons8.com/icons
 Acknowledgements
-I received inspiration for this project from X
+I received inspiration for this project from Pizzahut
