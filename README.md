@@ -4,14 +4,10 @@ One or two paragraphs providing an overview of your project. Tell us about your 
 Essentially, this part is your sales pitch.
 
 Design Process
-This website was made with providing pizzahut customers a better website and interface for them to place their orders.Following a black and white
-theme along with some pizzahut red colours, we modernize their website and made it easier to navigate through as everything is within 3 clicks
-of a button.
+This website was created with the goal of providing Pizza Hut customers a more user-friendly and efficient online experience for placing their orders. By incorporating a sleek black-and-white theme complemented by signature Pizza Hut red accents, we aimed to modernize the website’s design while staying true to the brand's identity. The revamped interface is not only visually appealing but also highly intuitive, ensuring that customers can find what they need quickly and easily. With a streamlined layout and improved navigation, every feature and functionality is accessible within just three clicks, making the ordering process faster and more convenient than ever.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
 
-As a Customer I would want a hassle free way to make orders and track them without needing to press too 
-many buttons to get to where I want.
+As a customer, I want a seamless and hassle-free experience when placing orders and tracking them. It should be straightforward and intuitive, allowing me to navigate the platform effortlessly without the need to press an excessive number of buttons to get to where I need to be. The process should be quick, efficient, and user-friendly, ensuring that I can place my order and monitor its status with minimal effort. A well-designed system that prioritizes convenience and ease of use would make the overall experience more enjoyable and stress-free, saving me time and frustration.
 
 Features
 
