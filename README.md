@@ -73,7 +73,8 @@ one has finished playing. After that it will redirect you to a successful paymen
 is being saved in an array into the localStorage.
 
 
-
+Figma link:
+https://www.figma.com/design/U2RMSoAizYU30EEBq0cLMF/Danish_Wireframe_Assg1?node-id=0-1&t=q5IegkuKuhiApHRI-1
 
 Credits
 https://chatgpt.com/
