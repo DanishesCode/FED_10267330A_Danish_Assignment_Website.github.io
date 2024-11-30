@@ -1,7 +1,4 @@
 PizzaHut(Danish version)
-One or two paragraphs providing an overview of your project. Tell us about your project.
-
-Essentially, this part is your sales pitch.
 
 Design Process
 This website was created with the goal of providing Pizza Hut customers a more user-friendly and efficient online experience for placing their orders. By incorporating a sleek black-and-white theme complemented by signature Pizza Hut red accents, we aimed to modernize the website’s design while staying true to the brand's identity. The revamped interface is not only visually appealing but also highly intuitive, ensuring that customers can find what they need quickly and easily. With a streamlined layout and improved navigation, every feature and functionality is accessible within just three clicks, making the ordering process faster and more convenient than ever.
